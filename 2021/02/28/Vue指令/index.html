@@ -380,18 +380,21 @@
             <div id="articleContent">
                 <h1 id="v-once"><a href="#v-once" class="headerlink" title="v-once"></a>v-once</h1><p>作用是定义他的元素或者组件只会渲染一次，包括元素或者组件的所有节点</p>
 <p>如果每一次组件的内容都一样，可以在组件上使用v-once指令，这样组件在第一次渲染的时候，会缓存到内存，如果以后切换组件，会直接从内存中取出该组件，提高效率。所以页面中大多是静态内容，想进一步优化性能的时候，可能会用到v-once。</p>
-<pre><code> &lt;div v-once&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;
+<pre><code> ==&lt;div v-once&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;==
 </code></pre>
 <p>v-on后面不需跟任何表达式</p>
-<h1 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h1><p>某些情况下，我们从服务器请求到的数据本身就是一个HTML代码（标签），如果我们直接通过 <code>&#123;&#123;&#125;&#125;`&#123;% endraw %&#125;或者v-text来输出，会将HTML代码也一起输出。但是我们可能希望的是按照HTML格式进行解析，并且显示对应的内容
+<h1 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h1><p>某些情况下，我们从服务器请求到的数据本身就是一个HTML代码（标签），如果我们直接通过 {{}}或者v-text来输出，会将HTML代码也一起输出。但是我们可能希望的是按照HTML格式进行解析，并且显示对应的内容
 
 1、该指令后面往往会跟上一个string类型
 
 2、会将string的html解析出来并且进行渲染
 
+
+
 ```
+
 <div id='app'>
-        <h2>&#123;&#123;link&#125;&#125;&lt;/h2&gt;             &lt;h2 v-html=&#39;link&#39;&gt;&lt;/h2&gt;     &lt;/div&gt;     &lt;script src=../vue.js&gt;&lt;/script&gt;     &lt;script&gt;         const vm = new Vue(&#123;             el: &#39;#app&#39;,             data: &#123;                 link: </code><a target="_blank" rel="noopener" href='http://www.baidu.com'>百度一下</a>`<br>            },<br>            methods: {},<br>        })<br>    </script></p>
+        <h2></h2><br>        <h2 v-html='link'></h2><br>    </div><br>    <script src=../vue.js></script><br>    <script><br>        const vm = new Vue({<br>            el: '#app',<br>            data: {<br>                link: <code>&lt;a href=&#39;http://www.baidu.com&#39;&gt;百度一下&lt;/a&gt;</code><br>            },<br>            methods: {},<br>        })<br>    </script></p>
 <pre><code>
 </code></pre>
 <p>执行结果是：<br>  <a target="_blank" rel="noopener" href='http://www.baidu.com'>百度一下</a><br>  百度一下</p>
@@ -649,7 +652,7 @@ style后面跟的是一个数组类型
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Joewei</a>
+                    <a href="/about" rel="external nofollow noreferrer">joewei</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -672,7 +675,7 @@ style后面跟的是一个数组类型
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">Joewei</a>
+                    <a href="/about" target="_blank">joewei</a>
                     !
                 </span>
             </div>
@@ -897,7 +900,7 @@ style后面跟的是一个数组类型
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Joewei
+                            joewei
                             
                         </span>
                     </div>
@@ -943,7 +946,7 @@ style后面跟的是一个数组类型
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Joewei
+                            joewei
                             
                         </span>
                     </div>
