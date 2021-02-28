@@ -381,7 +381,7 @@
             <div id="articleContent">
                 <h1 id="v-once"><a href="#v-once" class="headerlink" title="v-once"></a>v-once</h1><p>作用是定义他的元素或者组件只会渲染一次，包括元素或者组件的所有节点</p>
 <p>如果每一次组件的内容都一样，可以在组件上使用v-once指令，这样组件在第一次渲染的时候，会缓存到内存，如果以后切换组件，会直接从内存中取出该组件，提高效率。所以页面中大多是静态内容，想进一步优化性能的时候，可能会用到v-once。</p>
-<pre><code> ==&lt;div v-once&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;==
+<pre><code> &lt;div v-once&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;
 </code></pre>
 <p>v-on后面不需跟任何表达式</p>
 <h1 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h1><p>某些情况下，我们从服务器请求到的数据本身就是一个HTML代码（标签），如果我们直接通过 {{}}或者v-text来输出，会将HTML代码也一起输出。但是我们可能希望的是按照HTML格式进行解析，并且显示对应的内容
@@ -389,8 +389,6 @@
 1、该指令后面往往会跟上一个string类型
 
 2、会将string的html解析出来并且进行渲染
-
-
 
 ```
 
